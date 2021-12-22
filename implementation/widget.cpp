@@ -852,9 +852,10 @@ void Widget::show_button_clicked()
  else
  {
          QMessageBox message;
-         message.setWindowTitle("Error");
-         message.setText(" THIS PROGRAM DOESNT FOLLOW TINY LANGUAGE RULES !!");
+         message.setWindowTitle("Syntax error");
+         message.setText(" Your code doesn't satisfy TINY language grammer");
          message.setStandardButtons(QMessageBox::Ok);
+         message.setIcon(QMessageBox::Critical);
          message.setDefaultButton(QMessageBox::Ok);
          message.exec();
 
@@ -934,10 +935,11 @@ void Widget::button_clicked()
           }
           if (i==input.length() && x.empty()==false)
           {
-             outputtext = outputtext+"ERROR ON LINE "+QString::number(lineCount)+ " COMMENT ISN'T CLOSED ";
+             outputtext = outputtext+"Check for openning or closing tag of the comment in line "+QString::number(lineCount);
              output->setText(outputtext);
-             Q.setWindowTitle("Error");
-             Q.setText("ERROR ON LINE "+QString::number(lineCount)+"COMMENT ISN'T CLOSED");
+             Q.setWindowTitle("Error in line" + QString::number(lineCount));
+             Q.setIcon(QMessageBox::Critical);
+             Q.setText("Check for openning or closing tag of the comment");
              Q.setStandardButtons(QMessageBox::Ok);
              Q.setDefaultButton(QMessageBox::Ok);
              Q.exec();
