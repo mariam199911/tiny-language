@@ -974,13 +974,13 @@ void Widget::button_clicked()
               if (input[i].isDigit())
               {
 
-                  outputtext = outputtext+"ERROR ON LINE "+QString::number(lineCount);
-                  output->setText(outputtext);
-                  Q.setWindowTitle("Error");
-                  Q.setText("ERROR ON LINE "+QString::number(lineCount)+"      ");
-                  Q.setStandardButtons(QMessageBox::Ok);
-                  Q.setDefaultButton(QMessageBox::Ok);
-                  Q.exec();
+                  QMessageBox message;
+                  message.setWindowTitle("Syntax error");
+                  message.setText(" Your code doesn't satisfy TINY language grammer");
+                  message.setStandardButtons(QMessageBox::Ok);
+                  message.setIcon(QMessageBox::Critical);
+                  message.setDefaultButton(QMessageBox::Ok);
+                  message.exec();
                   return;
               }
               break;
@@ -1034,13 +1034,13 @@ void Widget::button_clicked()
                  {
                    if ((input[i] > 64 && input[i] < 91) || (input[i] > 96 && input[i] < 123))
                    {
-                       outputtext = outputtext+"ERROR ON LINE "+QString::number(lineCount);
-                       output->setText(outputtext);
-                       Q.setWindowTitle("Error");
-                       Q.setText("ERROR ON LINE "+QString::number(lineCount));
-                       Q.setStandardButtons(QMessageBox::Ok);
-                       Q.setDefaultButton(QMessageBox::Ok);
-                       Q.exec();
+                       QMessageBox message;
+                       message.setWindowTitle("Syntax error");
+                       message.setText(" Your code doesn't satisfy TINY language grammer");
+                       message.setStandardButtons(QMessageBox::Ok);
+                       message.setIcon(QMessageBox::Critical);
+                       message.setDefaultButton(QMessageBox::Ok);
+                       message.exec();
                        return;
                    }
                     break;
@@ -1068,13 +1068,13 @@ void Widget::button_clicked()
                   }
                   else
                   {
-                      outputtext = outputtext+"ERROR ON LINE "+QString::number(lineCount);
-                      output->setText(outputtext);
-                      Q.setWindowTitle("Error");
-                      Q.setText("ERROR ON LINE "+QString::number(lineCount));
-                      Q.setStandardButtons(QMessageBox::Ok);
-                      Q.setDefaultButton(QMessageBox::Ok);
-                      Q.exec();
+                      QMessageBox message;
+                      message.setWindowTitle("Syntax error");
+                      message.setText(" Your code doesn't satisfy TINY language grammer");
+                      message.setStandardButtons(QMessageBox::Ok);
+                      message.setIcon(QMessageBox::Critical);
+                      message.setDefaultButton(QMessageBox::Ok);
+                      message.exec();
 
                       return;
                   }
@@ -1104,13 +1104,13 @@ void Widget::button_clicked()
                    {
                        continue;
                    }
-                   outputtext = outputtext+"ERROR ON LINE "+QString::number(lineCount);
-                   output->setText(outputtext);
-                   Q.setWindowTitle("Error");
-                   Q.setText("ERROR ON LINE "+QString::number(lineCount));
-                   Q.setStandardButtons(QMessageBox::Ok);
-                   Q.setDefaultButton(QMessageBox::Ok);
-                   Q.exec();
+                   QMessageBox message;
+                   message.setWindowTitle("Syntax error");
+                   message.setText(" Your code doesn't satisfy TINY language grammer");
+                   message.setStandardButtons(QMessageBox::Ok);
+                   message.setIcon(QMessageBox::Critical);
+                   message.setDefaultButton(QMessageBox::Ok);
+                   message.exec();
                    return;
                }
               }

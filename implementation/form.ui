@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1424</width>
-    <height>797</height>
+    <width>4740</width>
+    <height>4310</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Parsing Tree</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -24,8 +24,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1400</width>
-        <height>773</height>
+        <width>4716</width>
+        <height>4286</height>
        </rect>
       </property>
      </widget>
